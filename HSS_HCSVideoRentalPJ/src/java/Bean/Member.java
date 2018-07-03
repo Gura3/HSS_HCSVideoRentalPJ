@@ -5,7 +5,6 @@
  */
 package Bean;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -15,23 +14,37 @@ import javax.validation.constraints.*;
  */
 @Entity
 public class Member {
+
     @Id
-    private String memberno; //会員番号
+    @NotNull
+    private String memberno; //会員番号（主キー
+    @NotNull
     private String birthdate;//生年月日８桁（半角数字）
+    @NotNull
     private String name; //会員氏名
+    @NotNull
     private String kana; //会員氏名フリガナ
+    @NotNull
     private String sex; //性別
-   private String postal; //郵便番号
+    @NotNull
+    private String postal; //郵便番号
+    @NotNull
     private String address; //住所
+    @NotNull
     private String phone; //電話番号
+    @NotNull
     private String occupation; //職業
+    @NotNull
     private String last_visits; //最終来店日
     private String mail_address;//メールアドレス
     private String mail_magazine;//メールマガジン
     private String unpaid;//未払い情報
+
     private String borrowingcount;//貸し出し中個数
+    @NotNull
     private String withdrawal;//退会フラグ
 
+    //ゲッター＋セッター（自動生成済）
     public String getMemberno() {
         return memberno;
     }
@@ -151,8 +164,5 @@ public class Member {
     public void setWithdrawal(String withdrawal) {
         this.withdrawal = withdrawal;
     }
-    
-    
-    
-    
+
 }
