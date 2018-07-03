@@ -7,8 +7,6 @@ package Bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.constraints.Size;
-
 /**
  *
  * @author Gura3
