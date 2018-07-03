@@ -16,21 +16,21 @@ import javax.validation.constraints.*;
 @Entity
 public class Member {
     @Id
-    private String memberno;
-    private String birthdate;
-    private String name;
-    private String kana;
-    private String sex;
-    private String postal;
-    private String address;
-    private String phone;
-    private String occupation;
-    private String last_visits;
-    private String mail_address;
-    private String mail_magazine;
-    private String unpaid;
-    private String borrowingcount;
-    private String withdrawal;
+    private String memberno; //会員番号
+    private String birthdate;//生年月日８桁（半角数字）
+    private String name; //会員氏名
+    private String kana; //会員氏名フリガナ
+    private String sex; //性別
+   private String postal; //郵便番号
+    private String address; //住所
+    private String phone; //電話番号
+    private String occupation; //職業
+    private String last_visits; //最終来店日
+    private String mail_address;//メールアドレス
+    private String mail_magazine;//メールマガジン
+    private String unpaid;//未払い情報
+    private String borrowingcount;//貸し出し中個数
+    private String withdrawal;//退会フラグ
 
     public String getMemberno() {
         return memberno;
