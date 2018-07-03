@@ -5,14 +5,16 @@
  */
 package Bean;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 /**
  *
  * @author Gura3
  */
+/* 仮会員エンティティクラス */
 @Entity
-public class TemporaryMember {
+public class TemporaryMember implements Serializable{
     @Id
     private String memberno;            //仮会員No
     private String birthday;            //生年月日
@@ -27,6 +29,9 @@ public class TemporaryMember {
     private String mail_magazine;       //メールマガジン
     private String registararion_date;  //仮会員登録日
 
+    /* コンストラクタ */
+    public TemporaryMember(){}
+    /* getter･setter */
     public String getMemberno() {
         return memberno;
     }

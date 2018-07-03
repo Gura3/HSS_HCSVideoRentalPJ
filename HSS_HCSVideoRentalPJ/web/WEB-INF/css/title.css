@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018/07/03, 12:13:52
+    Author     : s20163002
+*/
+/* タイトルバー */
+h1{
+    position: relative;
+    padding: 0.35em 0.5em;
+    background: #0E7AC4;
+    color: #FFF200;
+    text-shadow: 1px 2px 3px #808080;
+}
+h1:before{
+    content: " ";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: -webkit-calc(100% - 16px);
+    width: calc(100% - 16px);
+    height: 0;
+    border: solid 8px transparent;
+    border-bottom-color: #b2ddf0;
+    
+}
