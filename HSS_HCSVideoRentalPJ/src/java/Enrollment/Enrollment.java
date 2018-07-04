@@ -14,6 +14,7 @@ import javax.persistence.*;
  */
 @Entity
 public class Enrollment {
+
     @Id
     private String member_no; //会員No（FK　会員テーブル
     private String regist_date; //登録日
@@ -73,7 +74,5 @@ public class Enrollment {
     public void setStore_cd(String store_cd) {
         this.store_cd = store_cd;
     }
-    
-    
-    
+
 }

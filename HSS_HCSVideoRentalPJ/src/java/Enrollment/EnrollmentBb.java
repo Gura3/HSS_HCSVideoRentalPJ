@@ -24,61 +24,67 @@ public class EnrollmentBb implements Serializable {
     private String iden_class; //身分証区分
     private String staff_id; //店員ID（店員テーブル
     private String store_cd; //店舗コード
-    
-      @EJB
-      EnrollmentDb db ;//名前決めてない
-      @Inject
-      transient Logger log;
-      
-      public String create(){
-          Enrollment enrollment = new Enrollment(member_no,regist_date,iden_no,iden_class,staff_id,store_cd);
-          try{
-              db.create(enrollment);
-              clear();
-          }catch(Exception e){
-              log.fine("■"+member_no/*会員番号エラー？*/+"|"+e.getMessage());
-          }
-          return null;
-      }
-      public String edit(Enrollment enrollment){
-          member_no = enrollment.getMember_no();
-          //ほかにもデータを設定
-          return null;
-      }
-      
-      //find
-      
-    public String update(){
-        Enrollment enrollment = new Enrollment(member_no,regist_date,iden_no,iden_class,staff_id,store_cd);
-        try{
-            db.update(enrollment);
+
+    @EJB
+    EnrollmentDb db;//名前決めてない
+    @Inject
+    transient Logger log;
+
+    public String create() {
+        Enrollment enrollment = new Enrollment(member_no, regist_date, iden_no, iden_class, staff_id, store_cd);
+        try {
+            db.create(enrollment);
             clear();
-        }catch(Exception e){
-            log.fine("■"+member_no/*会員番号？*/+"|"+e.getMessage());
+        } catch (Exception e) {
+            log.fine("■" + member_no/*会員番号エラー？*/ + "|" + e.getMessage());
         }
         return null;
     }
-    public String find(){
-        Enrollment e =db.find(member_no);
-        if(e!=null){
+
+    public String edit(Enrollment enrollment) {
+        member_no = enrollment.getMember_no();
+        //ほかにもデータを設定
+        return null;
+    }
+
+    public String update() {
+        Enrollment enrollment = new Enrollment(member_no, regist_date, iden_no, iden_class, staff_id, store_cd);
+        try {
+            db.update(enrollment);
+            clear();
+        } catch (Exception e) {
+            log.fine("■" + member_no/*会員番号？*/ + "|" + e.getMessage());
+        }
+        return null;
+    }
+
+    public String find() {
+        Enrollment e = db.find(member_no);
+        if (e != null) {
             this.member_no = e.getMember_no();
+            this.regist_date = e.getRegist_date();
+            this.iden_no = e.getIden_class();
+            this.iden_class = e.getIden_class();
+            this.staff_id = e.getStaff_id();
+            this.store_cd = e.getStore_cd();
+
             /*getなんちゃら*/
         }
         return null;
     }
-    public String delete(Enrollment enrollment){
+
+    public String delete(Enrollment enrollment) {
         db.delete(enrollment);
         return null;
     }
-    public List<Enrollment> getAll(){
+
+    public List<Enrollment> getAll() {
         return db.getAll();
     }
-    public void clear(){
-        member_no=regist_date=iden_no=iden_class=staff_id=store_cd=null;
+
+    public void clear() {
+        member_no = regist_date = iden_no = iden_class = staff_id = store_cd = null;
     }
-    
-   
-    
 
     public String getMember_no() {
         return member_no;
@@ -128,8 +134,6 @@ public class EnrollmentBb implements Serializable {
         this.store_cd = store_cd;
     }
 
-   
-
     public Logger getLog() {
         return log;
     }
@@ -137,5 +141,5 @@ public class EnrollmentBb implements Serializable {
     public void setLog(Logger log) {
         this.log = log;
     }
-       
+
 }

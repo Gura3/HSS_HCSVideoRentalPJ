@@ -7,12 +7,14 @@ package Bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 /**
  *
  * @author Gura3
  */
 @Entity
 public class TemporaryMember {
+
     @Id
     private String memberno;            //仮会員No
     private String birthday;            //生年月日
@@ -122,6 +124,5 @@ public class TemporaryMember {
     public void setRegistararion_date(String registararion_date) {
         this.registararion_date = registararion_date;
     }
-    
-    
+
 }

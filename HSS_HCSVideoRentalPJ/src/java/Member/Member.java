@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Bean;
+package Member;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
-/**
- *
- * @author s20163014
- */
 @Entity
 public class Member {
 
@@ -43,6 +34,10 @@ public class Member {
     private String borrowingcount;//貸し出し中個数
     @NotNull
     private String withdrawal;//退会フラグ
+
+    Member(String member_no, String birthdate, String name, String kana, String sex, String postal, String address, String phone, String occupation) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     //ゲッター＋セッター（自動生成済）
     public String getMemberno() {
