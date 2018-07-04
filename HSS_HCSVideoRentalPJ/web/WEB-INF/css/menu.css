@@ -58,3 +58,12 @@ input {
     max-height: 46px;
     opacity: 1;
 }
+
+.tabMenu1{
+    width: 50%;
+    float: left;
+}
+
+.tabMenu2{
+    width: 50%;
+}

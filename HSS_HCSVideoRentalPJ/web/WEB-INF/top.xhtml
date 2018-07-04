@@ -7,25 +7,25 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TODO supply a title</title>
+        <title>HCSDVDレンタル-トップページ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/title.css"/>
         <link rel="stylesheet" type="text/css" href="css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="css/mainbutton.css"/>
     </head>
     <body>
         <h1>HCSDVDレンタル</h1>
         <div>
-            <button value="">貸出</button>
+            <button value="" class="mainButton">貸出</button>
             <button value="">返却</button>
         </div>
         <div class="menu">
             <label for="menu_bar02">レジ機能</label>
             <input type="checkbox" id="menu_bar02" class="accordion" />
             <ul id="links02">
-                <li><a href="">Link01</a></li>
-                <li><a href="">Link02</a></li>
-                <li><a href="">Link03</a></li>
-                <li><a href="">Link04</a></li>
+                <li><a href="">延滞料金支払い</a></li>
+                <li><a href="">レジ〆(途中)</a></li>
+                <li><a href="">レジ〆(最後)</a></li>
             </ul>
             <label for="menu_bar01">会員管理</label>
             <input type="checkbox" id="menu_bar01" class="accordion" />
@@ -36,15 +36,26 @@ and open the template in the editor.
                 <li><a href="">Link04</a></li>
             </ul>
         </div>
-        
-        <button value=""></button>
-        <button value=""></button>
+       
         <button value="">DVD情報管理</button>
         <button value="">在庫管理</button>
         <button value="">分析機能</button>
         <button value="">店員管理</button>
+        
+        <!--tabu-->
+        <div id="tabcontrol" class="tabMenu1">
+            <p><button type="button" onclick="location.href = '#tabpage1'">会員管理</button></p>
+            <p><button type="button" onclick="location.href = '#tabpage2'">DVD情報管理</button></p>
+            <p><button type="button" onclick="location.href = '#tabpage3'">在庫管理</button></p>
+            <p><button type="button" onclick="location.href = '#tabpage4'">分析機能</button></p>
+            <p><button type="button" onclick="location.href = '#tabpage5'">店員管理</button></p>
+        </div>
 
 
-
+        <div id="tabbody" class="tabMenu2">
+            <div id="tabpage1"><p><button type="button">会員入会</button></p></div>
+            <div id="tabpage1"><p><button type="button">会員カード再発行</button></p></div>
+            <div id="tabpage1"><p><button type="button">有効期限更新</button></p></div>
+        </div>
     </body>
 </html>
