@@ -27,3 +27,22 @@ h1:before{
     border-bottom-color: #b2ddf0;
     
 }
+
+/* サブタイトルバー */
+h2 {
+  position: relative;
+  padding: .75em 1em .75em 1.5em;
+  border: 1px solid #ccc;
+  width: 30%;
+}
+h2::after {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  content: '';
+  width: 6px;
+  height: -webkit-calc(100% - 1em);
+  height: calc(100% - 1em);
+  background-color: #3498db;
+  border-radius: 4px;
+}
