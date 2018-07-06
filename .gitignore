@@ -23,4 +23,8 @@
 hs_err_pid*
 /HSS_HCSVideoRentalPJ/nbproject/private/
 /HSS_HCSVideoRentalPJ/build/
+<<<<<<< HEAD
 /HSS_HCSVideoRentalPJ_1/nbproject/private/
+=======
+/HSS_HCSVideoRentalPJ/dist/
+>>>>>>> origin/master

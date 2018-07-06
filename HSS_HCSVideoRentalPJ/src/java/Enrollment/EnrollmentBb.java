@@ -9,9 +9,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import static org.jboss.logging.NDC.clear;
+
 //import javax.validation.constraints.NotNull;
 
 @Named
@@ -41,9 +39,13 @@ public class EnrollmentBb implements Serializable {
         return null;
     }
 
-    public String edit(Enrollment enrollment) {
-        member_no = enrollment.getMember_no();
-        //ほかにもデータを設定
+    public String edit(Enrollment enr) {
+        member_no = enr.getMember_no();
+        regist_date=enr.getRegist_date();
+        iden_no=enr.getIden_no();
+        iden_class=enr.getIden_class();
+        staff_id=enr.getStaff_id();
+        store_cd=enr.getStore_cd();
         return null;
     }
 
@@ -68,7 +70,7 @@ public class EnrollmentBb implements Serializable {
             this.staff_id = e.getStaff_id();
             this.store_cd = e.getStore_cd();
 
-            /*getなんちゃら*/
+           
         }
         return null;
     }
